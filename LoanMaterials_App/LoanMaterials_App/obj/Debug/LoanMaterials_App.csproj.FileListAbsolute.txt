@@ -1,1 +1,2 @@
 G:\Fontys\ProP\LoanMaterials_App\LoanMaterials_App\bin\Debug\LoanMaterials_App.exe.config
+f:\Repository\ProP-project\LoanMaterials_App\LoanMaterials_App\bin\Debug\LoanMaterials_App.exe.config

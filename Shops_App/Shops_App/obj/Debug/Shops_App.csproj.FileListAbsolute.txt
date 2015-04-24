@@ -1,1 +1,2 @@
 G:\Fontys\ProP\Shops_App\Shops_App\bin\Debug\Shops_App.exe.config
+f:\Repository\ProP-project\Shops_App\Shops_App\bin\Debug\Shops_App.exe.config
