@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inspection_app", "Inspection_app\Inspection_app.csproj", "{B57B22D3-24A9-4C4D-AAC9-521E3A9ACF32}"
 EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Inspection app", "Inspection app\Inspection app.modelproj", "{24B42F0E-6D27-45B1-AB35-0633F2D36957}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B57B22D3-24A9-4C4D-AAC9-521E3A9ACF32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B57B22D3-24A9-4C4D-AAC9-521E3A9ACF32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B57B22D3-24A9-4C4D-AAC9-521E3A9ACF32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24B42F0E-6D27-45B1-AB35-0633F2D36957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24B42F0E-6D27-45B1-AB35-0633F2D36957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24B42F0E-6D27-45B1-AB35-0633F2D36957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24B42F0E-6D27-45B1-AB35-0633F2D36957}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
