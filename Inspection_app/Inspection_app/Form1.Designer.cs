@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBoxVisitorInfo = new System.Windows.Forms.GroupBox();
+            this.btnHistory = new System.Windows.Forms.Button();
             this.comboBoxId = new System.Windows.Forms.ComboBox();
             this.btnShowStatus = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -39,24 +40,23 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.richTextBoxInfo = new System.Windows.Forms.RichTextBox();
-            this.btnHistory = new System.Windows.Forms.Button();
             this.btnVisitorsOverview = new System.Windows.Forms.Button();
             this.btnAccountsOverview = new System.Windows.Forms.Button();
             this.btnCampingOverview = new System.Windows.Forms.Button();
             this.groupBoxShop = new System.Windows.Forms.GroupBox();
-            this.lblShopId = new System.Windows.Forms.Label();
-            this.lblShopIncome = new System.Windows.Forms.Label();
-            this.comboBoxShopID = new System.Windows.Forms.ComboBox();
-            this.txtProfit = new System.Windows.Forms.TextBox();
             this.btnShowProfit = new System.Windows.Forms.Button();
+            this.txtProfit = new System.Windows.Forms.TextBox();
+            this.comboBoxShopID = new System.Windows.Forms.ComboBox();
+            this.lblShopIncome = new System.Windows.Forms.Label();
+            this.lblShopId = new System.Windows.Forms.Label();
             this.groupBoxArticle = new System.Windows.Forms.GroupBox();
-            this.lblProductID = new System.Windows.Forms.Label();
-            this.comboBoxProductID = new System.Windows.Forms.ComboBox();
-            this.lblQuantity = new System.Windows.Forms.Label();
-            this.txtQuantity = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnSoldQunatity = new System.Windows.Forms.Button();
             this.lblAmountLeft = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
+            this.lblQuantity = new System.Windows.Forms.Label();
+            this.comboBoxProductID = new System.Windows.Forms.ComboBox();
+            this.lblProductID = new System.Windows.Forms.Label();
             this.groupBoxVisitorInfo.SuspendLayout();
             this.groupBoxShop.SuspendLayout();
             this.groupBoxArticle.SuspendLayout();
@@ -80,6 +80,15 @@
             this.groupBoxVisitorInfo.TabIndex = 0;
             this.groupBoxVisitorInfo.TabStop = false;
             this.groupBoxVisitorInfo.Text = "Visitor Info";
+            // 
+            // btnHistory
+            // 
+            this.btnHistory.Location = new System.Drawing.Point(121, 156);
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.Size = new System.Drawing.Size(90, 25);
+            this.btnHistory.TabIndex = 10;
+            this.btnHistory.Text = "Show History";
+            this.btnHistory.UseVisualStyleBackColor = true;
             // 
             // comboBoxId
             // 
@@ -176,15 +185,6 @@
             this.richTextBoxInfo.TabIndex = 1;
             this.richTextBoxInfo.Text = "";
             // 
-            // btnHistory
-            // 
-            this.btnHistory.Location = new System.Drawing.Point(121, 156);
-            this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(90, 25);
-            this.btnHistory.TabIndex = 10;
-            this.btnHistory.Text = "Show History";
-            this.btnHistory.UseVisualStyleBackColor = true;
-            // 
             // btnVisitorsOverview
             // 
             this.btnVisitorsOverview.Location = new System.Drawing.Point(66, 276);
@@ -202,6 +202,7 @@
             this.btnAccountsOverview.TabIndex = 3;
             this.btnAccountsOverview.Text = "Accounts Overview";
             this.btnAccountsOverview.UseVisualStyleBackColor = true;
+            this.btnAccountsOverview.Click += new System.EventHandler(this.btnAccountsOverview_Click);
             // 
             // btnCampingOverview
             // 
@@ -226,15 +227,32 @@
             this.groupBoxShop.TabStop = false;
             this.groupBoxShop.Text = "Shop Overview";
             // 
-            // lblShopId
+            // btnShowProfit
             // 
-            this.lblShopId.AutoSize = true;
-            this.lblShopId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblShopId.Location = new System.Drawing.Point(17, 35);
-            this.lblShopId.Name = "lblShopId";
-            this.lblShopId.Size = new System.Drawing.Size(62, 15);
-            this.lblShopId.TabIndex = 1;
-            this.lblShopId.Text = "Shop ID:";
+            this.btnShowProfit.Location = new System.Drawing.Point(64, 107);
+            this.btnShowProfit.Name = "btnShowProfit";
+            this.btnShowProfit.Size = new System.Drawing.Size(104, 25);
+            this.btnShowProfit.TabIndex = 6;
+            this.btnShowProfit.Text = "Show Profit";
+            this.btnShowProfit.UseVisualStyleBackColor = true;
+            // 
+            // txtProfit
+            // 
+            this.txtProfit.BackColor = System.Drawing.SystemColors.Window;
+            this.txtProfit.Location = new System.Drawing.Point(95, 67);
+            this.txtProfit.Name = "txtProfit";
+            this.txtProfit.ReadOnly = true;
+            this.txtProfit.Size = new System.Drawing.Size(100, 20);
+            this.txtProfit.TabIndex = 11;
+            // 
+            // comboBoxShopID
+            // 
+            this.comboBoxShopID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxShopID.FormattingEnabled = true;
+            this.comboBoxShopID.Location = new System.Drawing.Point(95, 34);
+            this.comboBoxShopID.Name = "comboBoxShopID";
+            this.comboBoxShopID.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxShopID.TabIndex = 11;
             // 
             // lblShopIncome
             // 
@@ -246,32 +264,15 @@
             this.lblShopIncome.TabIndex = 2;
             this.lblShopIncome.Text = "Profit:";
             // 
-            // comboBoxShopID
+            // lblShopId
             // 
-            this.comboBoxShopID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxShopID.FormattingEnabled = true;
-            this.comboBoxShopID.Location = new System.Drawing.Point(95, 34);
-            this.comboBoxShopID.Name = "comboBoxShopID";
-            this.comboBoxShopID.Size = new System.Drawing.Size(100, 21);
-            this.comboBoxShopID.TabIndex = 11;
-            // 
-            // txtProfit
-            // 
-            this.txtProfit.BackColor = System.Drawing.SystemColors.Window;
-            this.txtProfit.Location = new System.Drawing.Point(95, 67);
-            this.txtProfit.Name = "txtProfit";
-            this.txtProfit.ReadOnly = true;
-            this.txtProfit.Size = new System.Drawing.Size(100, 20);
-            this.txtProfit.TabIndex = 11;
-            // 
-            // btnShowProfit
-            // 
-            this.btnShowProfit.Location = new System.Drawing.Point(64, 107);
-            this.btnShowProfit.Name = "btnShowProfit";
-            this.btnShowProfit.Size = new System.Drawing.Size(104, 25);
-            this.btnShowProfit.TabIndex = 6;
-            this.btnShowProfit.Text = "Show Profit";
-            this.btnShowProfit.UseVisualStyleBackColor = true;
+            this.lblShopId.AutoSize = true;
+            this.lblShopId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblShopId.Location = new System.Drawing.Point(17, 35);
+            this.lblShopId.Name = "lblShopId";
+            this.lblShopId.Size = new System.Drawing.Size(62, 15);
+            this.lblShopId.TabIndex = 1;
+            this.lblShopId.Text = "Shop ID:";
             // 
             // groupBoxArticle
             // 
@@ -289,43 +290,14 @@
             this.groupBoxArticle.TabStop = false;
             this.groupBoxArticle.Text = "Product Overview";
             // 
-            // lblProductID
+            // textBox1
             // 
-            this.lblProductID.AutoSize = true;
-            this.lblProductID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblProductID.Location = new System.Drawing.Point(6, 30);
-            this.lblProductID.Name = "lblProductID";
-            this.lblProductID.Size = new System.Drawing.Size(78, 15);
-            this.lblProductID.TabIndex = 12;
-            this.lblProductID.Text = "Product ID:";
-            // 
-            // comboBoxProductID
-            // 
-            this.comboBoxProductID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxProductID.FormattingEnabled = true;
-            this.comboBoxProductID.Location = new System.Drawing.Point(106, 29);
-            this.comboBoxProductID.Name = "comboBoxProductID";
-            this.comboBoxProductID.Size = new System.Drawing.Size(100, 21);
-            this.comboBoxProductID.TabIndex = 13;
-            // 
-            // lblQuantity
-            // 
-            this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblQuantity.Location = new System.Drawing.Point(6, 63);
-            this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(94, 15);
-            this.lblQuantity.TabIndex = 14;
-            this.lblQuantity.Text = "Quantity sold:";
-            // 
-            // txtQuantity
-            // 
-            this.txtQuantity.BackColor = System.Drawing.SystemColors.Window;
-            this.txtQuantity.Location = new System.Drawing.Point(106, 62);
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.ReadOnly = true;
-            this.txtQuantity.Size = new System.Drawing.Size(100, 20);
-            this.txtQuantity.TabIndex = 15;
+            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox1.Location = new System.Drawing.Point(106, 94);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 18;
             // 
             // btnSoldQunatity
             // 
@@ -346,14 +318,43 @@
             this.lblAmountLeft.TabIndex = 17;
             this.lblAmountLeft.Text = "In stock:";
             // 
-            // textBox1
+            // txtQuantity
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(106, 94);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 18;
+            this.txtQuantity.BackColor = System.Drawing.SystemColors.Window;
+            this.txtQuantity.Location = new System.Drawing.Point(106, 62);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.ReadOnly = true;
+            this.txtQuantity.Size = new System.Drawing.Size(100, 20);
+            this.txtQuantity.TabIndex = 15;
+            // 
+            // lblQuantity
+            // 
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblQuantity.Location = new System.Drawing.Point(6, 63);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(94, 15);
+            this.lblQuantity.TabIndex = 14;
+            this.lblQuantity.Text = "Quantity sold:";
+            // 
+            // comboBoxProductID
+            // 
+            this.comboBoxProductID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxProductID.FormattingEnabled = true;
+            this.comboBoxProductID.Location = new System.Drawing.Point(106, 29);
+            this.comboBoxProductID.Name = "comboBoxProductID";
+            this.comboBoxProductID.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxProductID.TabIndex = 13;
+            // 
+            // lblProductID
+            // 
+            this.lblProductID.AutoSize = true;
+            this.lblProductID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblProductID.Location = new System.Drawing.Point(6, 30);
+            this.lblProductID.Name = "lblProductID";
+            this.lblProductID.Size = new System.Drawing.Size(78, 15);
+            this.lblProductID.TabIndex = 12;
+            this.lblProductID.Text = "Product ID:";
             // 
             // Form1
             // 
