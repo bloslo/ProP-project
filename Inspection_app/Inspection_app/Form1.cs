@@ -13,18 +13,9 @@ namespace Inspection_app
 {
     public partial class Form1 : Form
     {
-        DBExtractor retriever;
-
         public Form1()
         {
             InitializeComponent();
-
-            retriever = new DBExtractor();
-        }
-
-        private void btnAccountsOverview_Click(object sender, EventArgs e)
-        {
-            richTextBoxInfo.AppendText(retriever.Test().ToString());
         }
     }
 }

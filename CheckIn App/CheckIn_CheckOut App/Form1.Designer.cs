@@ -28,153 +28,137 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.txtRFID = new System.Windows.Forms.TextBox();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.txtLastName = new System.Windows.Forms.TextBox();
-            this.lblID = new System.Windows.Forms.Label();
-            this.lblFirstName = new System.Windows.Forms.Label();
-            this.lblRFID = new System.Windows.Forms.Label();
-            this.lblLastName = new System.Windows.Forms.Label();
-            this.txtBalance = new System.Windows.Forms.TextBox();
-            this.lblBalance = new System.Windows.Forms.Label();
-            this.lblStatus = new System.Windows.Forms.Label();
-            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // txtFirstName
+            // textBox1
             // 
-            this.txtFirstName.BackColor = System.Drawing.SystemColors.Window;
-            this.txtFirstName.Location = new System.Drawing.Point(112, 93);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.ReadOnly = true;
-            this.txtFirstName.Size = new System.Drawing.Size(100, 20);
-            this.txtFirstName.TabIndex = 0;
+            this.textBox1.Location = new System.Drawing.Point(94, 93);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 0;
             // 
-            // txtRFID
+            // textBox2
             // 
-            this.txtRFID.BackColor = System.Drawing.SystemColors.Window;
-            this.txtRFID.Location = new System.Drawing.Point(112, 61);
-            this.txtRFID.Name = "txtRFID";
-            this.txtRFID.ReadOnly = true;
-            this.txtRFID.Size = new System.Drawing.Size(100, 20);
-            this.txtRFID.TabIndex = 1;
+            this.textBox2.Location = new System.Drawing.Point(94, 61);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 1;
             // 
-            // txtID
+            // textBox3
             // 
-            this.txtID.BackColor = System.Drawing.SystemColors.Window;
-            this.txtID.Location = new System.Drawing.Point(112, 29);
-            this.txtID.Name = "txtID";
-            this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(100, 20);
-            this.txtID.TabIndex = 2;
+            this.textBox3.Location = new System.Drawing.Point(94, 29);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 2;
             // 
-            // txtLastName
+            // textBox4
             // 
-            this.txtLastName.BackColor = System.Drawing.SystemColors.Window;
-            this.txtLastName.Location = new System.Drawing.Point(112, 125);
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.ReadOnly = true;
-            this.txtLastName.Size = new System.Drawing.Size(100, 20);
-            this.txtLastName.TabIndex = 3;
+            this.textBox4.Location = new System.Drawing.Point(94, 125);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 3;
             // 
-            // lblID
+            // label1
             // 
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblID.Location = new System.Drawing.Point(12, 30);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(25, 15);
-            this.lblID.TabIndex = 4;
-            this.lblID.Text = "ID:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(19, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Id:";
             // 
-            // lblFirstName
+            // label2
             // 
-            this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblFirstName.Location = new System.Drawing.Point(12, 94);
-            this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(81, 15);
-            this.lblFirstName.TabIndex = 5;
-            this.lblFirstName.Text = "First Name:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(28, 96);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "First Name:";
             // 
-            // lblRFID
+            // label3
             // 
-            this.lblRFID.AutoSize = true;
-            this.lblRFID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblRFID.Location = new System.Drawing.Point(12, 62);
-            this.lblRFID.Name = "lblRFID";
-            this.lblRFID.Size = new System.Drawing.Size(70, 15);
-            this.lblRFID.TabIndex = 6;
-            this.lblRFID.Text = "RFID Nr. :";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(28, 64);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "RFID Nr.:";
             // 
-            // lblLastName
+            // label4
             // 
-            this.lblLastName.AutoSize = true;
-            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblLastName.Location = new System.Drawing.Point(12, 126);
-            this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(80, 15);
-            this.lblLastName.TabIndex = 7;
-            this.lblLastName.Text = "Last Name:";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(28, 128);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Last Name:";
             // 
-            // txtBalance
+            // textBox5
             // 
-            this.txtBalance.BackColor = System.Drawing.SystemColors.Window;
-            this.txtBalance.Location = new System.Drawing.Point(112, 157);
-            this.txtBalance.Name = "txtBalance";
-            this.txtBalance.ReadOnly = true;
-            this.txtBalance.Size = new System.Drawing.Size(100, 20);
-            this.txtBalance.TabIndex = 8;
+            this.textBox5.Location = new System.Drawing.Point(94, 157);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 8;
             // 
-            // lblBalance
+            // label5
             // 
-            this.lblBalance.AutoSize = true;
-            this.lblBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblBalance.Location = new System.Drawing.Point(12, 158);
-            this.lblBalance.Name = "lblBalance";
-            this.lblBalance.Size = new System.Drawing.Size(63, 15);
-            this.lblBalance.TabIndex = 9;
-            this.lblBalance.Text = "Balance:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(28, 160);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Balance:";
             // 
-            // lblStatus
+            // label6
             // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblStatus.Location = new System.Drawing.Point(12, 190);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(51, 15);
-            this.lblStatus.TabIndex = 10;
-            this.lblStatus.Text = "Status:";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(28, 192);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Status:";
             // 
-            // txtStatus
+            // label7
             // 
-            this.txtStatus.BackColor = System.Drawing.SystemColors.Window;
-            this.txtStatus.Location = new System.Drawing.Point(112, 189);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(100, 20);
-            this.txtStatus.TabIndex = 11;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(91, 192);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Status:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(280, 239);
-            this.Controls.Add(this.txtStatus);
-            this.Controls.Add(this.lblStatus);
-            this.Controls.Add(this.lblBalance);
-            this.Controls.Add(this.txtBalance);
-            this.Controls.Add(this.lblLastName);
-            this.Controls.Add(this.lblRFID);
-            this.Controls.Add(this.lblFirstName);
-            this.Controls.Add(this.lblID);
-            this.Controls.Add(this.txtLastName);
-            this.Controls.Add(this.txtID);
-            this.Controls.Add(this.txtRFID);
-            this.Controls.Add(this.txtFirstName);
+            this.ClientSize = new System.Drawing.Size(250, 239);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Name = "Form1";
-            this.Text = "Check In";
+            this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,18 +166,18 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtFirstName;
-        private System.Windows.Forms.TextBox txtRFID;
-        private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.TextBox txtLastName;
-        private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.Label lblFirstName;
-        private System.Windows.Forms.Label lblRFID;
-        private System.Windows.Forms.Label lblLastName;
-        private System.Windows.Forms.TextBox txtBalance;
-        private System.Windows.Forms.Label lblBalance;
-        private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
 

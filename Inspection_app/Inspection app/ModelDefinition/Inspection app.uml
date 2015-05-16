@@ -133,8 +133,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="8b2ab97a-f684-45c2-8a24-003a4ad0e411"
-                LastKnownName="MySqlConnection"
+                Id="02dcbd15-c4da-4a91-9fbb-ee16cc426b51"
+                LastKnownName="OleDbConnection"
                 LastKnownLocation="Inspection app.uml" />
             </type_NamedElement>
           </property>
@@ -612,7 +612,7 @@
           </property>
           <property
             Id="13ec0814-d0ea-4b70-b796-7ccae9644184"
-            name="TransferedMoney"
+            name="TotalTransferedMoney"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -642,89 +642,6 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="db354f31-7614-4893-aaa7-82723a420058"
-                  direction="Return">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                      LastKnownName="String"
-                      LastKnownLocation="Inspection app.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="f0603fda-e8ce-436d-b10b-6a9332a9f833"
-            name="Visitor"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="943d40ee-ad66-49ff-b96a-85d031e3e0fc"
-                  name="int id"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="23433b80-b31c-4c77-af6d-cd50d7f56656"
-                  name="string name"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="e4fc8647-204b-417a-b32a-7df871f72a30"
-                  name="decimal balance"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="cf24a03c-5fb1-4104-a21c-0e0210e24881"
-                  name="bool present"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="076f6ea7-7378-41aa-97d1-c2a3a049a59f"
-                  name="bool fee"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="2902ab5d-db61-4460-8232-81a014e44a98"
-                  name="decimal food"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="9e8a40c9-07f9-4cea-a758-1827e5cdfbed"
-                  name="decimal transfered"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="71663254-a5c3-4a4e-8ed0-56c08ad81c20"
-            name="Status"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="82fc11ed-a0ec-4f57-acef-668bc6e944e7"
                   direction="Return">
                   <type_NamedElement>
                     <primitiveTypeMoniker
@@ -802,24 +719,7 @@
           </property>
           <property
             Id="ab90eca8-4660-4be3-91a2-62121935d49c"
-            name="Price"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="260d1e65-8bb0-444f-8ae4-7764992f9ddd"
-                LastKnownName="decimal"
-                LastKnownLocation="Inspection app.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="319ea40d-714b-4680-89e8-d9200b352d3d"
-            name="CampSpotSection"
+            name="CampSpotPrice"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -856,52 +756,6 @@
                       LastKnownLocation="Inspection app.uml" />
                   </type_NamedElement>
                 </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="098031ca-f5c4-467a-bbd0-0a00f2d12747"
-            name="Camp"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="7f906c7b-c937-4fcd-9826-898f2b10f7d8"
-                  name="int id"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="74a8dc70-b6d8-4af5-aabc-37f028786f40"
-                  name="int section"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="30b4122a-e819-4eb6-9e9d-7b922fdc0979"
-                  name="decimal price"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="a08cbfff-cae4-4692-b6f5-5a1d2a9761e1"
-                  name="int residents"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="e027930b-4a9e-48bc-a090-ec433ebf8ecd"
-                  name="string type"
-                  direction="In"
-                  isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
@@ -1083,27 +937,75 @@
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="9d40e76d-1c45-4803-bde0-f0c5bf93287a"
-            name="Shop"
+            Id="f28797e1-e351-4daa-9656-612891a53861"
+            name="Info"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="83e91c8f-91df-4267-8f68-810d29a1f2ce"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="689f86aa-9e0f-4791-b729-1b1c819d2fb0">
+                    <propertyInstance
+                      Id="d228d441-2c01-44e7-acb3-e47f8fc7d63b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="80613992-1d53-40cb-a2ec-378afd58a2a6">
+                    <propertyInstance
+                      Id="01191224-816f-4fc1-848b-c557d88edb82"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f384cd89-bfd8-4b8a-a5d9-986d734e500d">
+                    <propertyInstance
+                      Id="9dcb3257-90f0-4e1d-9902-f7e348d3fff8"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="108907bc-40df-4c6d-9576-63301c4cd174">
+                    <propertyInstance
+                      Id="83513f09-2a35-42da-87b7-833f6afff112"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="03c11b76-13c3-48d7-8d0a-f570b7ef9864">
+                    <propertyInstance
+                      Id="c6437bc7-bcf3-4307-a323-6c86064252d6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fd421878-5a4c-4f54-b707-b5c5a4d64601">
+                    <propertyInstance
+                      Id="fd2e7ed6-ea05-4771-a66a-c1aa9b2e4d5a"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="3539c67b-a3e3-4452-88bb-429b4bad130f"
-                  name="int id"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="ca0ddc2c-95d5-47cb-99d1-dfdfac4a9b86"
-                  name="decimal income"
-                  direction="In"
-                  isUnique="false" />
+                  Id="d8bd6364-59de-4fd8-b537-5e09be31e9aa"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Inspection app.uml" />
+                  </type_NamedElement>
+                </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
@@ -1172,29 +1074,11 @@
                 LastKnownLocation="Inspection app.uml" />
             </type_NamedElement>
           </property>
-          <property
-            Id="c6f739fd-6c06-4071-8dd1-691de2eae8ea"
-            name="Stock"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                LastKnownName="Integer"
-                LastKnownLocation="Inspection app.uml" />
-            </type_NamedElement>
-          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="18c113d2-1e72-4e38-8746-2704c3122866"
-            name="Product"
+            Id="036cfbb7-6718-4318-aa2f-702ae035d530"
+            name="Info"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -1203,41 +1087,20 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="905ff815-1686-49d4-a21b-f9ada2ff0eca"
-                  name="int id"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="7bb17d46-19b3-468f-b7a3-c0c358b2b699"
-                  name="string name"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="df67032f-df01-41a2-a7ce-5ffa8c586540"
-                  name="int sold"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="90ec4d34-c25c-4b88-acb3-9f8cd1931832"
-                  name="int stock"
-                  direction="In"
-                  isUnique="false" />
+                  Id="1bd67822-f84d-4bef-85ce-49411d32145f"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Inspection app.uml" />
+                  </type_NamedElement>
+                </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <undefinedType
-        Id="8b2ab97a-f684-45c2-8a24-003a4ad0e411"
-        name="MySqlConnection" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
