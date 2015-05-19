@@ -24,6 +24,7 @@ namespace CheckIn_CheckOut_App
             helper = new DBHelper();
 
             LoadRFIDReader();
+            btnPay.Enabled = false;
         }
 
         private void LoadRFIDReader()
@@ -46,9 +47,9 @@ namespace CheckIn_CheckOut_App
 
         private void ProcessTag(object sender, TagEventArgs e)
         {
+            ClearAllTextBoxes(this);
             helper.CheckVisitor(e.Tag);
             Visitor vis = helper.GetVisitor(e.Tag);
-            ClearAllTextBoxes(this);
 
             try
             {
@@ -58,6 +59,12 @@ namespace CheckIn_CheckOut_App
                 txtLastName.Text = vis.LastName;
                 txtBalance.Text = vis.Balance.ToString();
                 txtStatus.Text = vis.Status.ToString();
+                txtEntranceFee.Text = vis.EntranceFee;
+
+                if (vis.EntranceFee == "Paid")
+                    btnPay.Enabled = false;
+                else
+                    btnPay.Enabled = true;
             }
             catch (NullReferenceException ex)
             {
@@ -71,6 +78,23 @@ namespace CheckIn_CheckOut_App
             {
                 if (box is TextBox)
                     (box as TextBox).Clear();
+            }
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToDecimal(txtBalance.Text) < 65)
+            {
+                MessageBox.Show("Insufficient funds! \nThe entrance fee is €55 + €10 extra for paying on the entrance.");
+            }
+            else
+            {
+                helper.Pay(txtRFID.Text);
+                Visitor vis = helper.GetVisitor(txtRFID.Text);
+
+                txtBalance.Text = vis.Balance.ToString();
+                txtEntranceFee.Text = vis.EntranceFee;
+                btnPay.Enabled = false;
             }
         }
     }

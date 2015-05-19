@@ -40,6 +40,9 @@
             this.lblBalance = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
             this.txtStatus = new System.Windows.Forms.TextBox();
+            this.lblEntranceFee = new System.Windows.Forms.Label();
+            this.txtEntranceFee = new System.Windows.Forms.TextBox();
+            this.btnPay = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtFirstName
@@ -156,11 +159,43 @@
             this.txtStatus.Size = new System.Drawing.Size(100, 20);
             this.txtStatus.TabIndex = 11;
             // 
+            // lblEntranceFee
+            // 
+            this.lblEntranceFee.AutoSize = true;
+            this.lblEntranceFee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblEntranceFee.Location = new System.Drawing.Point(12, 222);
+            this.lblEntranceFee.Name = "lblEntranceFee";
+            this.lblEntranceFee.Size = new System.Drawing.Size(96, 15);
+            this.lblEntranceFee.TabIndex = 12;
+            this.lblEntranceFee.Text = "Entrance Fee:";
+            // 
+            // txtEntranceFee
+            // 
+            this.txtEntranceFee.BackColor = System.Drawing.SystemColors.Window;
+            this.txtEntranceFee.Location = new System.Drawing.Point(112, 221);
+            this.txtEntranceFee.Name = "txtEntranceFee";
+            this.txtEntranceFee.ReadOnly = true;
+            this.txtEntranceFee.Size = new System.Drawing.Size(100, 20);
+            this.txtEntranceFee.TabIndex = 13;
+            // 
+            // btnPay
+            // 
+            this.btnPay.Location = new System.Drawing.Point(122, 254);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(75, 25);
+            this.btnPay.TabIndex = 14;
+            this.btnPay.Text = "Pay";
+            this.btnPay.UseVisualStyleBackColor = true;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(280, 239);
+            this.ClientSize = new System.Drawing.Size(265, 294);
+            this.Controls.Add(this.btnPay);
+            this.Controls.Add(this.txtEntranceFee);
+            this.Controls.Add(this.lblEntranceFee);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.lblBalance);
@@ -194,6 +229,9 @@
         private System.Windows.Forms.Label lblBalance;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.Label lblEntranceFee;
+        private System.Windows.Forms.TextBox txtEntranceFee;
+        private System.Windows.Forms.Button btnPay;
     }
 }
 
