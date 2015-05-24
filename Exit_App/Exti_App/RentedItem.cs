@@ -10,17 +10,21 @@ namespace Exti_App
     {
         public int ItemId { get; set; }
         public string ItemName { get; set; }
-        public decimal Price { get; set; }
+        public int Quantity { get; set; }
         public DateTime HireDate { get; set; }
-        public DateTime ReturnDate { get; set; }
 
-        public RentedItem(int id, string name, decimal price, DateTime hire, DateTime reDate)
+        public RentedItem(int id, string name, int quantity, DateTime hire)
         {
             ItemId = id;
             ItemName = name;
-            Price = price;
+            Quantity = quantity;
             HireDate = hire;
-            ReturnDate = reDate;
+        }
+
+        public string FormatOutput()
+        {
+            return "Item ID: " + ItemId + ", Item Name: " + ItemName + ", Quantity: " + Quantity + ", Hire Date: " + 
+                HireDate.Date.ToString("dd/MMM/yyyy");
         }
     }
 }

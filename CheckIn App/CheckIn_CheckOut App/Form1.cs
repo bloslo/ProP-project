@@ -25,6 +25,7 @@ namespace CheckIn_CheckOut_App
 
             LoadRFIDReader();
             btnPay.Enabled = false;
+            btnCheckIn.Enabled = false;
         }
 
         private void LoadRFIDReader()
@@ -48,7 +49,6 @@ namespace CheckIn_CheckOut_App
         private void ProcessTag(object sender, TagEventArgs e)
         {
             ClearAllTextBoxes(this);
-            helper.CheckVisitor(e.Tag);
             Visitor vis = helper.GetVisitor(e.Tag);
 
             try
@@ -90,12 +90,30 @@ namespace CheckIn_CheckOut_App
             else
             {
                 helper.Pay(txtRFID.Text);
-                Visitor vis = helper.GetVisitor(txtRFID.Text);
 
-                txtBalance.Text = vis.Balance.ToString();
-                txtEntranceFee.Text = vis.EntranceFee;
+                DisplayVisitor();
+
                 btnPay.Enabled = false;
+                btnCheckIn.Enabled = true;
             }
+        }
+
+        private void btnCheckIn_Click(object sender, EventArgs e)
+        {
+            helper.CheckVisitor(txtRFID.Text);
+
+            DisplayVisitor();
+
+            btnCheckIn.Enabled = false;
+        }
+
+        private void DisplayVisitor()
+        {
+            Visitor vis = helper.GetVisitor(txtRFID.Text);
+
+            txtBalance.Text = vis.Balance.ToString();
+            txtStatus.Text = vis.Status.ToString();
+            txtEntranceFee.Text = vis.EntranceFee;
         }
     }
 }

@@ -27,7 +27,7 @@ namespace Exti_App
             {
                 connection.Open();
                 cmd = new MySqlCommand("Select User_Id, FirstName, LastName, Balance, Status From users " +
-                "Where User_Id IN (select Users_Id From rifid Where RIFID_Nr = '" + rfid + "');", connection);
+                "Where User_Id IN (select Users_Id From rfid Where RFID_Nr = '" + rfid + "');", connection);
 
                 MySqlDataReader reader = cmd.ExecuteReader();
 
@@ -58,14 +58,14 @@ namespace Exti_App
             try
             {
                 connection.Open();
-                cmd = new MySqlCommand("Update users Set Status = 'CheckedOut' Where User_Id IN (select Users_Id " +
-                "from rifid where RIFID_Nr = '" + rfid + "');", connection);
+                cmd = new MySqlCommand("Update users Set Status = 'CheckedOut' Where User_Id IN " +
+                    "(select Users_Id from rfid where RFID_Nr = '" + rfid + "');", connection);
 
                 cmd.ExecuteNonQuery();
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("Please, connect to the database!");
+                
             }
             finally
             {
@@ -81,19 +81,55 @@ namespace Exti_App
             try
             {
                 connection.Open();
-                cmd = new MySqlCommand("Update users Set status = 'NOT VALID' where User_Id IN (select User_Id " +
-                "from rifid where RIFID_Nr = '" + rfid + "');", connection);
+                cmd = new MySqlCommand("Update users Set status = 'NOT VALID', Balance = 0 where User_Id IN " +
+                    "(select Users_Id from rfid where RFID_Nr = '" + rfid + "');", connection);
 
                 cmd.ExecuteNonQuery();
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("Please, connect to the database!");
+                
             }
             finally
             {
                 connection.Close();
             }
         }
+
+        public List<RentedItem> NotReturnedItems(string rfid)
+        {
+            MySqlCommand cmd;
+            List<RentedItem> items = new List<RentedItem>();
+
+            try
+            {
+                connection.Open();
+                cmd = new MySqlCommand("Select i.Item_Nr, i.ItemName, ri.Quantity, ri.Rent_Date " +
+                    "From rented_items ri join items i On ri.Item_nr = i.Item_Nr " +
+                "Where ri.User_Id IN (select Users_Id from rfid where RFID_Nr = '" + rfid + "') " +
+                "and Return_Date is Null;",
+                connection);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    items.Add(new RentedItem(Convert.ToInt32(reader[0]), reader[1].ToString(), Convert.ToInt32(reader[2]),
+                        Convert.ToDateTime(reader[3])));
+                }
+
+                return items;
+            }
+            catch (MySqlException)
+            {
+                return items;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+
     }
 }

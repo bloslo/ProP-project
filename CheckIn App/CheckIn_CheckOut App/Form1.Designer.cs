@@ -43,6 +43,7 @@
             this.lblEntranceFee = new System.Windows.Forms.Label();
             this.txtEntranceFee = new System.Windows.Forms.TextBox();
             this.btnPay = new System.Windows.Forms.Button();
+            this.btnCheckIn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtFirstName
@@ -188,11 +189,22 @@
             this.btnPay.UseVisualStyleBackColor = true;
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
+            // btnCheckIn
+            // 
+            this.btnCheckIn.Location = new System.Drawing.Point(33, 254);
+            this.btnCheckIn.Name = "btnCheckIn";
+            this.btnCheckIn.Size = new System.Drawing.Size(75, 25);
+            this.btnCheckIn.TabIndex = 15;
+            this.btnCheckIn.Text = "Check In";
+            this.btnCheckIn.UseVisualStyleBackColor = true;
+            this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(265, 294);
+            this.Controls.Add(this.btnCheckIn);
             this.Controls.Add(this.btnPay);
             this.Controls.Add(this.txtEntranceFee);
             this.Controls.Add(this.lblEntranceFee);
@@ -232,6 +244,7 @@
         private System.Windows.Forms.Label lblEntranceFee;
         private System.Windows.Forms.TextBox txtEntranceFee;
         private System.Windows.Forms.Button btnPay;
+        private System.Windows.Forms.Button btnCheckIn;
     }
 }
 

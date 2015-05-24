@@ -43,13 +43,16 @@
             this.lblStatus = new System.Windows.Forms.Label();
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.btnMarkAsNotValid = new System.Windows.Forms.Button();
+            this.btnCheckOut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbLoanedStuff
             // 
             this.lbLoanedStuff.FormattingEnabled = true;
+            this.lbLoanedStuff.HorizontalScrollbar = true;
             this.lbLoanedStuff.Location = new System.Drawing.Point(12, 43);
             this.lbLoanedStuff.Name = "lbLoanedStuff";
+            this.lbLoanedStuff.ScrollAlwaysVisible = true;
             this.lbLoanedStuff.Size = new System.Drawing.Size(307, 212);
             this.lbLoanedStuff.TabIndex = 0;
             // 
@@ -179,18 +182,32 @@
             // 
             // btnMarkAsNotValid
             // 
-            this.btnMarkAsNotValid.Location = new System.Drawing.Point(402, 214);
+            this.btnMarkAsNotValid.Enabled = false;
+            this.btnMarkAsNotValid.Location = new System.Drawing.Point(446, 214);
             this.btnMarkAsNotValid.Name = "btnMarkAsNotValid";
             this.btnMarkAsNotValid.Size = new System.Drawing.Size(75, 35);
             this.btnMarkAsNotValid.TabIndex = 14;
             this.btnMarkAsNotValid.Text = "Mark As\r\nNot Valid";
             this.btnMarkAsNotValid.UseVisualStyleBackColor = true;
+            this.btnMarkAsNotValid.Click += new System.EventHandler(this.btnMarkAsNotValid_Click);
+            // 
+            // btnCheckOut
+            // 
+            this.btnCheckOut.Enabled = false;
+            this.btnCheckOut.Location = new System.Drawing.Point(344, 219);
+            this.btnCheckOut.Name = "btnCheckOut";
+            this.btnCheckOut.Size = new System.Drawing.Size(75, 25);
+            this.btnCheckOut.TabIndex = 15;
+            this.btnCheckOut.Text = "Check Out";
+            this.btnCheckOut.UseVisualStyleBackColor = true;
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(565, 268);
+            this.Controls.Add(this.btnCheckOut);
             this.Controls.Add(this.btnMarkAsNotValid);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.lblStatus);
@@ -230,6 +247,7 @@
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Button btnMarkAsNotValid;
+        private System.Windows.Forms.Button btnCheckOut;
     }
 }
 

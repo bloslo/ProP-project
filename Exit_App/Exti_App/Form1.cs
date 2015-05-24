@@ -50,14 +50,16 @@ namespace Exti_App
             {
                 if (con is TextBox)
                     (con as TextBox).Clear();
+                else if (con is ListBox)
+                    (con as ListBox).Items.Clear();
             }
         }
 
         private void ProcessTag(object sender, TagEventArgs e)
         {
-            extractor.CheckOut(e.Tag);
-            Visitor vis = extractor.GetVisitor(e.Tag);
             ClearAllFormControls(this);
+            List<RentedItem> listItems = extractor.NotReturnedItems(e.Tag);
+            Visitor vis = extractor.GetVisitor(e.Tag);
 
             try
             {
@@ -67,11 +69,40 @@ namespace Exti_App
                 txtLastName.Text = vis.LastName;
                 txtBalance.Text = vis.Balance.ToString();
                 txtStatus.Text = vis.Status;
+
+                foreach (RentedItem item in listItems)
+                {
+                    lbLoanedStuff.Items.Add(item.FormatOutput());
+                }
+
+                if (listItems.Count == 0)
+                {
+                    btnCheckOut.Enabled = true;
+                    btnMarkAsNotValid.Enabled = true;
+                }
             }
             catch (NullReferenceException ex)
             {
                 MessageBox.Show("No such visitor!");
             }
+        }
+
+        private void btnMarkAsNotValid_Click(object sender, EventArgs e)
+        {
+            extractor.NotValid(txtRFIDNr.Text);
+            Visitor vis = extractor.GetVisitor(txtRFIDNr.Text);
+            txtStatus.Text = vis.Status;
+            txtBalance.Text = vis.Balance.ToString();
+            btnMarkAsNotValid.Enabled = false;
+        }
+
+        private void btnCheckOut_Click(object sender, EventArgs e)
+        {
+            extractor.CheckOut(txtRFIDNr.Text);
+            Visitor vis = extractor.GetVisitor(txtRFIDNr.Text);
+            txtStatus.Text = vis.Status;
+
+            btnCheckOut.Enabled = false;
         }
     }
 }
