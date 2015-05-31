@@ -28,157 +28,218 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.listBoxAll = new System.Windows.Forms.ListBox();
+            this.lblAllProducts = new System.Windows.Forms.Label();
+            this.listBoxOrdered = new System.Windows.Forms.ListBox();
+            this.lblOrderedProducts = new System.Windows.Forms.Label();
+            this.btnRemoveItem = new System.Windows.Forms.Button();
+            this.btnAddItem = new System.Windows.Forms.Button();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.lblBalance = new System.Windows.Forms.Label();
+            this.txtBalanceLeft = new System.Windows.Forms.TextBox();
+            this.lblRFIDNr = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
+            this.txtRFID = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.btnMakePayment = new System.Windows.Forms.Button();
+            this.lblShopID = new System.Windows.Forms.Label();
+            this.comboBoxShopID = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // listBox1
+            // listBoxAll
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 53);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(343, 355);
-            this.listBox1.TabIndex = 0;
+            this.listBoxAll.FormattingEnabled = true;
+            this.listBoxAll.Location = new System.Drawing.Point(12, 53);
+            this.listBoxAll.Name = "listBoxAll";
+            this.listBoxAll.Size = new System.Drawing.Size(343, 355);
+            this.listBoxAll.TabIndex = 0;
             // 
-            // label1
+            // lblAllProducts
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "List of all products:";
+            this.lblAllProducts.AutoSize = true;
+            this.lblAllProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAllProducts.Location = new System.Drawing.Point(12, 27);
+            this.lblAllProducts.Name = "lblAllProducts";
+            this.lblAllProducts.Size = new System.Drawing.Size(129, 15);
+            this.lblAllProducts.TabIndex = 1;
+            this.lblAllProducts.Text = "List of all products:";
             // 
-            // listBox2
+            // listBoxOrdered
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(538, 53);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(343, 355);
-            this.listBox2.TabIndex = 2;
+            this.listBoxOrdered.FormattingEnabled = true;
+            this.listBoxOrdered.Location = new System.Drawing.Point(538, 53);
+            this.listBoxOrdered.Name = "listBoxOrdered";
+            this.listBoxOrdered.Size = new System.Drawing.Size(343, 355);
+            this.listBoxOrdered.TabIndex = 2;
             // 
-            // label2
+            // lblOrderedProducts
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(535, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "List of consumptions:";
+            this.lblOrderedProducts.AutoSize = true;
+            this.lblOrderedProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblOrderedProducts.Location = new System.Drawing.Point(535, 27);
+            this.lblOrderedProducts.Name = "lblOrderedProducts";
+            this.lblOrderedProducts.Size = new System.Drawing.Size(163, 15);
+            this.lblOrderedProducts.TabIndex = 3;
+            this.lblOrderedProducts.Text = "List of ordered products:";
             // 
-            // button1
+            // btnRemoveItem
             // 
-            this.button1.Location = new System.Drawing.Point(402, 207);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Remove Item";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnRemoveItem.Enabled = false;
+            this.btnRemoveItem.Location = new System.Drawing.Point(402, 207);
+            this.btnRemoveItem.Name = "btnRemoveItem";
+            this.btnRemoveItem.Size = new System.Drawing.Size(91, 23);
+            this.btnRemoveItem.TabIndex = 4;
+            this.btnRemoveItem.Text = "Remove Item";
+            this.btnRemoveItem.UseVisualStyleBackColor = true;
+            this.btnRemoveItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
             // 
-            // button2
+            // btnAddItem
             // 
-            this.button2.Location = new System.Drawing.Point(402, 156);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Add Item";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAddItem.Enabled = false;
+            this.btnAddItem.Location = new System.Drawing.Point(402, 156);
+            this.btnAddItem.Name = "btnAddItem";
+            this.btnAddItem.Size = new System.Drawing.Size(91, 23);
+            this.btnAddItem.TabIndex = 5;
+            this.btnAddItem.Text = "Add Item";
+            this.btnAddItem.UseVisualStyleBackColor = true;
+            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
-            // label3
+            // lblTotal
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(678, 456);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Total:";
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblTotal.Location = new System.Drawing.Point(257, 458);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(43, 15);
+            this.lblTotal.TabIndex = 6;
+            this.lblTotal.Text = "Total:";
             // 
-            // textBox1
+            // txtTotal
             // 
-            this.textBox1.Location = new System.Drawing.Point(762, 453);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 7;
+            this.txtTotal.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTotal.Location = new System.Drawing.Point(353, 457);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtTotal.TabIndex = 7;
             // 
-            // label4
+            // lblBalance
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(678, 499);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Balance left:";
+            this.lblBalance.AutoSize = true;
+            this.lblBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblBalance.Location = new System.Drawing.Point(257, 492);
+            this.lblBalance.Name = "lblBalance";
+            this.lblBalance.Size = new System.Drawing.Size(87, 15);
+            this.lblBalance.TabIndex = 8;
+            this.lblBalance.Text = "Balance left:";
             // 
-            // textBox2
+            // txtBalanceLeft
             // 
-            this.textBox2.Location = new System.Drawing.Point(762, 496);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 9;
+            this.txtBalanceLeft.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBalanceLeft.Location = new System.Drawing.Point(353, 491);
+            this.txtBalanceLeft.Name = "txtBalanceLeft";
+            this.txtBalanceLeft.ReadOnly = true;
+            this.txtBalanceLeft.Size = new System.Drawing.Size(100, 20);
+            this.txtBalanceLeft.TabIndex = 9;
             // 
-            // label5
+            // lblRFIDNr
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(467, 463);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "RFID Nr.:";
+            this.lblRFIDNr.AutoSize = true;
+            this.lblRFIDNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblRFIDNr.Location = new System.Drawing.Point(52, 458);
+            this.lblRFIDNr.Name = "lblRFIDNr";
+            this.lblRFIDNr.Size = new System.Drawing.Size(66, 15);
+            this.lblRFIDNr.TabIndex = 10;
+            this.lblRFIDNr.Text = "RFID Nr.:";
             // 
-            // label6
+            // lblID
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(467, 495);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(19, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Id:";
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblID.Location = new System.Drawing.Point(52, 492);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(25, 15);
+            this.lblID.TabIndex = 11;
+            this.lblID.Text = "ID:";
             // 
-            // textBox3
+            // txtRFID
             // 
-            this.textBox3.Location = new System.Drawing.Point(539, 460);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 12;
+            this.txtRFID.BackColor = System.Drawing.SystemColors.Window;
+            this.txtRFID.Location = new System.Drawing.Point(129, 457);
+            this.txtRFID.Name = "txtRFID";
+            this.txtRFID.ReadOnly = true;
+            this.txtRFID.Size = new System.Drawing.Size(100, 20);
+            this.txtRFID.TabIndex = 12;
             // 
-            // textBox4
+            // txtID
             // 
-            this.textBox4.Location = new System.Drawing.Point(539, 492);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 13;
+            this.txtID.BackColor = System.Drawing.SystemColors.Window;
+            this.txtID.Location = new System.Drawing.Point(129, 491);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.TabIndex = 13;
+            // 
+            // btnMakePayment
+            // 
+            this.btnMakePayment.Location = new System.Drawing.Point(516, 472);
+            this.btnMakePayment.Name = "btnMakePayment";
+            this.btnMakePayment.Size = new System.Drawing.Size(95, 23);
+            this.btnMakePayment.TabIndex = 14;
+            this.btnMakePayment.Text = "Make Payment";
+            this.btnMakePayment.UseVisualStyleBackColor = true;
+            this.btnMakePayment.Click += new System.EventHandler(this.btnMakePayment_Click);
+            // 
+            // lblShopID
+            // 
+            this.lblShopID.AutoSize = true;
+            this.lblShopID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblShopID.Location = new System.Drawing.Point(672, 458);
+            this.lblShopID.Name = "lblShopID";
+            this.lblShopID.Size = new System.Drawing.Size(62, 15);
+            this.lblShopID.TabIndex = 15;
+            this.lblShopID.Text = "Shop ID:";
+            // 
+            // comboBoxShopID
+            // 
+            this.comboBoxShopID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxShopID.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBoxShopID.FormattingEnabled = true;
+            this.comboBoxShopID.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.comboBoxShopID.Location = new System.Drawing.Point(740, 457);
+            this.comboBoxShopID.Name = "comboBoxShopID";
+            this.comboBoxShopID.Size = new System.Drawing.Size(44, 21);
+            this.comboBoxShopID.TabIndex = 16;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(893, 556);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.comboBoxShopID);
+            this.Controls.Add(this.lblShopID);
+            this.Controls.Add(this.btnMakePayment);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.txtRFID);
+            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.lblRFIDNr);
+            this.Controls.Add(this.txtBalanceLeft);
+            this.Controls.Add(this.lblBalance);
+            this.Controls.Add(this.txtTotal);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.btnAddItem);
+            this.Controls.Add(this.btnRemoveItem);
+            this.Controls.Add(this.lblOrderedProducts);
+            this.Controls.Add(this.listBoxOrdered);
+            this.Controls.Add(this.lblAllProducts);
+            this.Controls.Add(this.listBoxAll);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -188,20 +249,23 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.ListBox listBoxAll;
+        private System.Windows.Forms.Label lblAllProducts;
+        private System.Windows.Forms.ListBox listBoxOrdered;
+        private System.Windows.Forms.Label lblOrderedProducts;
+        private System.Windows.Forms.Button btnRemoveItem;
+        private System.Windows.Forms.Button btnAddItem;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Label lblBalance;
+        private System.Windows.Forms.TextBox txtBalanceLeft;
+        private System.Windows.Forms.Label lblRFIDNr;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.TextBox txtRFID;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Button btnMakePayment;
+        private System.Windows.Forms.Label lblShopID;
+        private System.Windows.Forms.ComboBox comboBoxShopID;
     }
 }
 

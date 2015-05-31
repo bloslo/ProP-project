@@ -1,2 +1,10 @@
 G:\Fontys\ProP\Shops_App\Shops_App\bin\Debug\Shops_App.exe.config
 f:\Repository\ProP-project\Shops_App\Shops_App\bin\Debug\Shops_App.exe.config
+f:\Repository\ProP-project\Shops_App\Shops_App\bin\Debug\Shops_App.exe
+f:\Repository\ProP-project\Shops_App\Shops_App\bin\Debug\Shops_App.pdb
+f:\Repository\ProP-project\Shops_App\Shops_App\obj\Debug\Shops_App.csprojResolveAssemblyReference.cache
+f:\Repository\ProP-project\Shops_App\Shops_App\obj\Debug\Shops_App.Form1.resources
+f:\Repository\ProP-project\Shops_App\Shops_App\obj\Debug\Shops_App.Properties.Resources.resources
+f:\Repository\ProP-project\Shops_App\Shops_App\obj\Debug\Shops_App.csproj.GenerateResource.Cache
+f:\Repository\ProP-project\Shops_App\Shops_App\obj\Debug\Shops_App.exe
+f:\Repository\ProP-project\Shops_App\Shops_App\obj\Debug\Shops_App.pdb
