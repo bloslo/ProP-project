@@ -1,2 +1,10 @@
 G:\Fontys\ProP\LoanMaterials_App\LoanMaterials_App\bin\Debug\LoanMaterials_App.exe.config
 f:\Repository\ProP-project\LoanMaterials_App\LoanMaterials_App\bin\Debug\LoanMaterials_App.exe.config
+f:\Repository\ProP-project\LoanMaterials_App\LoanMaterials_App\bin\Debug\LoanMaterials_App.exe
+f:\Repository\ProP-project\LoanMaterials_App\LoanMaterials_App\bin\Debug\LoanMaterials_App.pdb
+f:\Repository\ProP-project\LoanMaterials_App\LoanMaterials_App\obj\Debug\LoanMaterials_App.csprojResolveAssemblyReference.cache
+f:\Repository\ProP-project\LoanMaterials_App\LoanMaterials_App\obj\Debug\LoanMaterials_App.Form1.resources
+f:\Repository\ProP-project\LoanMaterials_App\LoanMaterials_App\obj\Debug\LoanMaterials_App.Properties.Resources.resources
+f:\Repository\ProP-project\LoanMaterials_App\LoanMaterials_App\obj\Debug\LoanMaterials_App.csproj.GenerateResource.Cache
+f:\Repository\ProP-project\LoanMaterials_App\LoanMaterials_App\obj\Debug\LoanMaterials_App.exe
+f:\Repository\ProP-project\LoanMaterials_App\LoanMaterials_App\obj\Debug\LoanMaterials_App.pdb

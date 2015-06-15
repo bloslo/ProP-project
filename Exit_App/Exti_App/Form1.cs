@@ -58,8 +58,8 @@ namespace Exti_App
         private void ProcessTag(object sender, TagEventArgs e)
         {
             ClearAllFormControls(this);
-            List<RentedItem> listItems = extractor.NotReturnedItems(e.Tag);
             Visitor vis = extractor.GetVisitor(e.Tag);
+            List<RentedItem> listItems = extractor.NotReturnedItems(vis.ID);
 
             try
             {

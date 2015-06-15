@@ -28,55 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.lblFilePath = new System.Windows.Forms.Label();
+            this.btnBrowse = new System.Windows.Forms.Button();
+            this.txtFilePath = new System.Windows.Forms.TextBox();
+            this.btnInvoiceToDB = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblFilePath
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "File path:";
+            this.lblFilePath.AutoSize = true;
+            this.lblFilePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblFilePath.Location = new System.Drawing.Point(26, 47);
+            this.lblFilePath.Name = "lblFilePath";
+            this.lblFilePath.Size = new System.Drawing.Size(67, 15);
+            this.lblFilePath.TabIndex = 0;
+            this.lblFilePath.Text = "File path:";
             // 
-            // button1
+            // btnBrowse
             // 
-            this.button1.Location = new System.Drawing.Point(227, 41);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 28);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Browse";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBrowse.Location = new System.Drawing.Point(109, 115);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(117, 28);
+            this.btnBrowse.TabIndex = 1;
+            this.btnBrowse.Text = "Browse";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
-            // textBox1
+            // txtFilePath
             // 
-            this.textBox1.Location = new System.Drawing.Point(109, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtFilePath.BackColor = System.Drawing.SystemColors.Window;
+            this.txtFilePath.Location = new System.Drawing.Point(109, 46);
+            this.txtFilePath.Name = "txtFilePath";
+            this.txtFilePath.ReadOnly = true;
+            this.txtFilePath.Size = new System.Drawing.Size(334, 20);
+            this.txtFilePath.TabIndex = 2;
             // 
-            // button2
+            // btnInvoiceToDB
             // 
-            this.button2.Location = new System.Drawing.Point(364, 41);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 28);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Invoice to DataBase";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnInvoiceToDB.Enabled = false;
+            this.btnInvoiceToDB.Location = new System.Drawing.Point(273, 115);
+            this.btnInvoiceToDB.Name = "btnInvoiceToDB";
+            this.btnInvoiceToDB.Size = new System.Drawing.Size(117, 28);
+            this.btnInvoiceToDB.TabIndex = 3;
+            this.btnInvoiceToDB.Text = "Invoice to DataBase";
+            this.btnInvoiceToDB.UseVisualStyleBackColor = true;
+            this.btnInvoiceToDB.Click += new System.EventHandler(this.btnInvoiceToDB_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 231);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(500, 231);
+            this.Controls.Add(this.btnInvoiceToDB);
+            this.Controls.Add(this.txtFilePath);
+            this.Controls.Add(this.btnBrowse);
+            this.Controls.Add(this.lblFilePath);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -86,10 +92,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblFilePath;
+        private System.Windows.Forms.Button btnBrowse;
+        private System.Windows.Forms.TextBox txtFilePath;
+        private System.Windows.Forms.Button btnInvoiceToDB;
     }
 }
 

@@ -96,7 +96,7 @@ namespace Exti_App
             }
         }
 
-        public List<RentedItem> NotReturnedItems(string rfid)
+        public List<RentedItem> NotReturnedItems(int id)
         {
             MySqlCommand cmd;
             List<RentedItem> items = new List<RentedItem>();
@@ -104,10 +104,13 @@ namespace Exti_App
             try
             {
                 connection.Open();
-                cmd = new MySqlCommand("Select i.Item_Nr, i.ItemName, ri.Quantity, ri.Rent_Date " +
-                    "From rented_items ri join items i On ri.Item_nr = i.Item_Nr " +
-                "Where ri.User_Id IN (select Users_Id from rfid where RFID_Nr = '" + rfid + "') " +
-                "and Return_Date is Null;",
+                cmd = new MySqlCommand("Select i.Item_Nr, i.ItemName, rl.Quantity, ri.Rent_Date " +
+                    "\nFrom items i join rent_line rl " +
+                "\nOn i.Item_Nr = rl.Item_ID " +
+                "\njoin rented_items ri " +
+                "\nOn rl.Order_Nr = ri.Order_Nr" +
+                "\nWhere ri.User_Id = " + id +
+                "\nAND ri.Return_Date is null;",
                 connection);
 
                 MySqlDataReader reader = cmd.ExecuteReader();

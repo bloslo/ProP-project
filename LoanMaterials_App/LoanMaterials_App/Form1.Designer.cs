@@ -28,199 +28,259 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.lbAllItems = new System.Windows.Forms.ListBox();
+            this.listBoxLoanedItems = new System.Windows.Forms.ListBox();
+            this.lblAllItemsList = new System.Windows.Forms.Label();
+            this.lblLoanedItems = new System.Windows.Forms.Label();
+            this.btnAddItem = new System.Windows.Forms.Button();
+            this.btnRemoveItem = new System.Windows.Forms.Button();
+            this.lblID = new System.Windows.Forms.Label();
+            this.lblRFID = new System.Windows.Forms.Label();
+            this.txtRFID = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblBalanceLeft = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.txtBalanceLeft = new System.Windows.Forms.TextBox();
+            this.lblReturnDate = new System.Windows.Forms.Label();
+            this.lblRentDate = new System.Windows.Forms.Label();
+            this.txtRentDate = new System.Windows.Forms.TextBox();
+            this.txtReturnDate = new System.Windows.Forms.TextBox();
+            this.btnBorrow = new System.Windows.Forms.Button();
+            this.btnReturn = new System.Windows.Forms.Button();
+            this.btnShowRentedItems = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listBox1
+            // lbAllItems
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 64);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(345, 355);
-            this.listBox1.TabIndex = 0;
+            this.lbAllItems.FormattingEnabled = true;
+            this.lbAllItems.Location = new System.Drawing.Point(12, 64);
+            this.lbAllItems.Name = "lbAllItems";
+            this.lbAllItems.Size = new System.Drawing.Size(345, 355);
+            this.lbAllItems.TabIndex = 0;
             // 
-            // listBox2
+            // listBoxLoanedItems
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(565, 64);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(345, 355);
-            this.listBox2.TabIndex = 1;
+            this.listBoxLoanedItems.FormattingEnabled = true;
+            this.listBoxLoanedItems.Location = new System.Drawing.Point(565, 64);
+            this.listBoxLoanedItems.Name = "listBoxLoanedItems";
+            this.listBoxLoanedItems.Size = new System.Drawing.Size(345, 355);
+            this.listBoxLoanedItems.TabIndex = 1;
             // 
-            // label1
+            // lblAllItemsList
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "List of all items:";
+            this.lblAllItemsList.AutoSize = true;
+            this.lblAllItemsList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAllItemsList.Location = new System.Drawing.Point(9, 39);
+            this.lblAllItemsList.Name = "lblAllItemsList";
+            this.lblAllItemsList.Size = new System.Drawing.Size(109, 15);
+            this.lblAllItemsList.TabIndex = 2;
+            this.lblAllItemsList.Text = "List of all items:";
             // 
-            // label2
+            // lblLoanedItems
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(562, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "List of items to loan:";
+            this.lblLoanedItems.AutoSize = true;
+            this.lblLoanedItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblLoanedItems.Location = new System.Drawing.Point(562, 39);
+            this.lblLoanedItems.Name = "lblLoanedItems";
+            this.lblLoanedItems.Size = new System.Drawing.Size(137, 15);
+            this.lblLoanedItems.TabIndex = 3;
+            this.lblLoanedItems.Text = "List of items to loan:";
             // 
-            // button1
+            // btnAddItem
             // 
-            this.button1.Location = new System.Drawing.Point(411, 183);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Add Item";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAddItem.Enabled = false;
+            this.btnAddItem.Location = new System.Drawing.Point(411, 183);
+            this.btnAddItem.Name = "btnAddItem";
+            this.btnAddItem.Size = new System.Drawing.Size(95, 23);
+            this.btnAddItem.TabIndex = 4;
+            this.btnAddItem.Text = "Add Item";
+            this.btnAddItem.UseVisualStyleBackColor = true;
+            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
-            // button2
+            // btnRemoveItem
             // 
-            this.button2.Location = new System.Drawing.Point(411, 238);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Remove Item";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnRemoveItem.Enabled = false;
+            this.btnRemoveItem.Location = new System.Drawing.Point(411, 238);
+            this.btnRemoveItem.Name = "btnRemoveItem";
+            this.btnRemoveItem.Size = new System.Drawing.Size(95, 23);
+            this.btnRemoveItem.TabIndex = 5;
+            this.btnRemoveItem.Text = "Remove Item";
+            this.btnRemoveItem.UseVisualStyleBackColor = true;
+            this.btnRemoveItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
             // 
-            // label3
+            // lblID
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(495, 480);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(21, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "ID:";
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblID.Location = new System.Drawing.Point(66, 485);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(25, 15);
+            this.lblID.TabIndex = 6;
+            this.lblID.Text = "ID:";
             // 
-            // label4
+            // lblRFID
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(495, 452);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "RFID Nr.:";
+            this.lblRFID.AutoSize = true;
+            this.lblRFID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblRFID.Location = new System.Drawing.Point(66, 457);
+            this.lblRFID.Name = "lblRFID";
+            this.lblRFID.Size = new System.Drawing.Size(43, 15);
+            this.lblRFID.TabIndex = 7;
+            this.lblRFID.Text = "RFID:";
             // 
-            // textBox1
+            // txtRFID
             // 
-            this.textBox1.Location = new System.Drawing.Point(565, 449);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 8;
+            this.txtRFID.BackColor = System.Drawing.SystemColors.Window;
+            this.txtRFID.Location = new System.Drawing.Point(136, 454);
+            this.txtRFID.Name = "txtRFID";
+            this.txtRFID.ReadOnly = true;
+            this.txtRFID.Size = new System.Drawing.Size(100, 20);
+            this.txtRFID.TabIndex = 8;
             // 
-            // textBox2
+            // txtID
             // 
-            this.textBox2.Location = new System.Drawing.Point(565, 477);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 9;
+            this.txtID.BackColor = System.Drawing.SystemColors.Window;
+            this.txtID.Location = new System.Drawing.Point(136, 482);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.TabIndex = 9;
             // 
-            // label5
+            // lblTotal
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(697, 452);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Total:";
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblTotal.Location = new System.Drawing.Point(268, 457);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(43, 15);
+            this.lblTotal.TabIndex = 10;
+            this.lblTotal.Text = "Total:";
             // 
-            // label6
+            // lblBalanceLeft
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(697, 480);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Balance left:";
+            this.lblBalanceLeft.AutoSize = true;
+            this.lblBalanceLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblBalanceLeft.Location = new System.Drawing.Point(268, 485);
+            this.lblBalanceLeft.Name = "lblBalanceLeft";
+            this.lblBalanceLeft.Size = new System.Drawing.Size(87, 15);
+            this.lblBalanceLeft.TabIndex = 11;
+            this.lblBalanceLeft.Text = "Balance left:";
             // 
-            // textBox3
+            // txtTotal
             // 
-            this.textBox3.Location = new System.Drawing.Point(779, 449);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 12;
+            this.txtTotal.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTotal.Location = new System.Drawing.Point(372, 456);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtTotal.TabIndex = 12;
             // 
-            // textBox4
+            // txtBalanceLeft
             // 
-            this.textBox4.Location = new System.Drawing.Point(779, 477);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 13;
+            this.txtBalanceLeft.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBalanceLeft.Location = new System.Drawing.Point(372, 484);
+            this.txtBalanceLeft.Name = "txtBalanceLeft";
+            this.txtBalanceLeft.ReadOnly = true;
+            this.txtBalanceLeft.Size = new System.Drawing.Size(100, 20);
+            this.txtBalanceLeft.TabIndex = 13;
             // 
-            // label7
+            // lblReturnDate
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(697, 552);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Return Date:";
+            this.lblReturnDate.AutoSize = true;
+            this.lblReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblReturnDate.Location = new System.Drawing.Point(515, 485);
+            this.lblReturnDate.Name = "lblReturnDate";
+            this.lblReturnDate.Size = new System.Drawing.Size(88, 15);
+            this.lblReturnDate.TabIndex = 14;
+            this.lblReturnDate.Text = "Return Date:";
             // 
-            // label8
+            // lblRentDate
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(495, 552);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 13);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Rent Date:";
+            this.lblRentDate.AutoSize = true;
+            this.lblRentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblRentDate.Location = new System.Drawing.Point(515, 457);
+            this.lblRentDate.Name = "lblRentDate";
+            this.lblRentDate.Size = new System.Drawing.Size(75, 15);
+            this.lblRentDate.TabIndex = 15;
+            this.lblRentDate.Text = "Rent Date:";
             // 
-            // textBox5
+            // txtRentDate
             // 
-            this.textBox5.Location = new System.Drawing.Point(565, 549);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 16;
+            this.txtRentDate.BackColor = System.Drawing.SystemColors.Window;
+            this.txtRentDate.Location = new System.Drawing.Point(626, 456);
+            this.txtRentDate.Name = "txtRentDate";
+            this.txtRentDate.ReadOnly = true;
+            this.txtRentDate.Size = new System.Drawing.Size(100, 20);
+            this.txtRentDate.TabIndex = 16;
             // 
-            // textBox6
+            // txtReturnDate
             // 
-            this.textBox6.Location = new System.Drawing.Point(779, 549);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 17;
+            this.txtReturnDate.BackColor = System.Drawing.SystemColors.Window;
+            this.txtReturnDate.Location = new System.Drawing.Point(626, 484);
+            this.txtReturnDate.Name = "txtReturnDate";
+            this.txtReturnDate.ReadOnly = true;
+            this.txtReturnDate.Size = new System.Drawing.Size(100, 20);
+            this.txtReturnDate.TabIndex = 17;
+            // 
+            // btnBorrow
+            // 
+            this.btnBorrow.Location = new System.Drawing.Point(743, 467);
+            this.btnBorrow.Name = "btnBorrow";
+            this.btnBorrow.Size = new System.Drawing.Size(75, 23);
+            this.btnBorrow.TabIndex = 18;
+            this.btnBorrow.Text = "Borrow";
+            this.btnBorrow.UseVisualStyleBackColor = true;
+            this.btnBorrow.Click += new System.EventHandler(this.btnBorrow_Click);
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.Location = new System.Drawing.Point(743, 503);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(75, 23);
+            this.btnReturn.TabIndex = 19;
+            this.btnReturn.Text = "Return";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
+            // btnShowRentedItems
+            // 
+            this.btnShowRentedItems.Location = new System.Drawing.Point(833, 466);
+            this.btnShowRentedItems.Name = "btnShowRentedItems";
+            this.btnShowRentedItems.Size = new System.Drawing.Size(75, 55);
+            this.btnShowRentedItems.TabIndex = 20;
+            this.btnShowRentedItems.Text = "Show Rented Items";
+            this.btnShowRentedItems.UseVisualStyleBackColor = true;
+            this.btnShowRentedItems.Click += new System.EventHandler(this.btnShowRentedItems_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(922, 623);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
+            this.ClientSize = new System.Drawing.Size(922, 562);
+            this.Controls.Add(this.btnShowRentedItems);
+            this.Controls.Add(this.btnReturn);
+            this.Controls.Add(this.btnBorrow);
+            this.Controls.Add(this.txtReturnDate);
+            this.Controls.Add(this.txtRentDate);
+            this.Controls.Add(this.lblRentDate);
+            this.Controls.Add(this.lblReturnDate);
+            this.Controls.Add(this.txtBalanceLeft);
+            this.Controls.Add(this.txtTotal);
+            this.Controls.Add(this.lblBalanceLeft);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.txtRFID);
+            this.Controls.Add(this.lblRFID);
+            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.btnRemoveItem);
+            this.Controls.Add(this.btnAddItem);
+            this.Controls.Add(this.lblLoanedItems);
+            this.Controls.Add(this.lblAllItemsList);
+            this.Controls.Add(this.listBoxLoanedItems);
+            this.Controls.Add(this.lbAllItems);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Rent Items";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,24 +288,27 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.ListBox lbAllItems;
+        private System.Windows.Forms.ListBox listBoxLoanedItems;
+        private System.Windows.Forms.Label lblAllItemsList;
+        private System.Windows.Forms.Label lblLoanedItems;
+        private System.Windows.Forms.Button btnAddItem;
+        private System.Windows.Forms.Button btnRemoveItem;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Label lblRFID;
+        private System.Windows.Forms.TextBox txtRFID;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label lblBalanceLeft;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.TextBox txtBalanceLeft;
+        private System.Windows.Forms.Label lblReturnDate;
+        private System.Windows.Forms.Label lblRentDate;
+        private System.Windows.Forms.TextBox txtRentDate;
+        private System.Windows.Forms.TextBox txtReturnDate;
+        private System.Windows.Forms.Button btnBorrow;
+        private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.Button btnShowRentedItems;
     }
 }
 

@@ -186,7 +186,7 @@ namespace Shops_App
                         listBoxOrdered.Items.RemoveAt(j);
                         decimal total = Convert.ToDecimal(txtTotal.Text) - order[j].Price;
                         txtTotal.Text = total.ToString();
-                        link.RestoreQuantity(order[j].ProductID);
+                        link.RestoreQuantity(order[j].ProductID, order[j].Quantity);
                         order.RemoveAt(j);
 
                         break;

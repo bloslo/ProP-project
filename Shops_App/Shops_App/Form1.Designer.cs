@@ -241,7 +241,7 @@
             this.Controls.Add(this.lblAllProducts);
             this.Controls.Add(this.listBoxAll);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Shop Application";
             this.ResumeLayout(false);
             this.PerformLayout();
 

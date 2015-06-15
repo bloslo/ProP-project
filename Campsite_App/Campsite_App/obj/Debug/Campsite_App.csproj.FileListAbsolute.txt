@@ -1,2 +1,10 @@
 G:\Fontys\ProP\Campsite_App\Campsite_App\bin\Debug\Campsite_App.exe.config
 f:\Repository\ProP-project\Campsite_App\Campsite_App\bin\Debug\Campsite_App.exe.config
+f:\Repository\ProP-project\Campsite_App\Campsite_App\bin\Debug\Campsite_App.exe
+f:\Repository\ProP-project\Campsite_App\Campsite_App\bin\Debug\Campsite_App.pdb
+f:\Repository\ProP-project\Campsite_App\Campsite_App\obj\Debug\Campsite_App.csprojResolveAssemblyReference.cache
+f:\Repository\ProP-project\Campsite_App\Campsite_App\obj\Debug\Campsite_App.Form1.resources
+f:\Repository\ProP-project\Campsite_App\Campsite_App\obj\Debug\Campsite_App.Properties.Resources.resources
+f:\Repository\ProP-project\Campsite_App\Campsite_App\obj\Debug\Campsite_App.csproj.GenerateResource.Cache
+f:\Repository\ProP-project\Campsite_App\Campsite_App\obj\Debug\Campsite_App.exe
+f:\Repository\ProP-project\Campsite_App\Campsite_App\obj\Debug\Campsite_App.pdb

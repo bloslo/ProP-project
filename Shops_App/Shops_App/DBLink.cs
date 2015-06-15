@@ -175,14 +175,14 @@ namespace Shops_App
             }
         }
 
-        public void RestoreQuantity(int id)
+        public void RestoreQuantity(int id, int quantity)
         {
             MySqlCommand command;
 
             try
             {
                 connection.Open();
-                string sql = "Update product  Set Amount = Amount + 1 Where Product_Nr = '" +
+                string sql = "Update product  Set Amount = Amount + '" + quantity + "' Where Product_Nr = '" +
                 id + "';";
                 command = new MySqlCommand(sql, connection);
 
