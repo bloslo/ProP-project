@@ -161,7 +161,8 @@ namespace Shops_App
         {
             try
             {
-                link.RegisterPurchase(Convert.ToInt32(txtID.Text), Convert.ToInt32(comboBoxShopID.SelectedItem), order);
+                link.RegisterPurchase(Convert.ToInt32(txtID.Text), Convert.ToInt32(comboBoxShopID.SelectedItem), order,
+                    Convert.ToDecimal(txtTotal.Text));
 
                 txtBalanceLeft.Text = link.Buy(txtRFID.Text, Convert.ToDecimal(txtTotal.Text)).ToString();
                 btnAddItem.Enabled = false;

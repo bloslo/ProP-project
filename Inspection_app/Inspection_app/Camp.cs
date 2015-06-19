@@ -10,28 +10,16 @@ namespace Inspection_app
     {
         public int CampSpotID { get; set; }
         public int CampSpotSection { get; set; }
-        public decimal Price { get; set; }
-        public int ResidentsCount { get; set; }
-        public string Type { get; set; }
 
-        public Camp(int id, int section, decimal price, int residents, string type)
+        public Camp(int id, int section)
         {
             CampSpotID = id;
             CampSpotSection = section;
-            Price = price;
-            ResidentsCount = residents;
-            Type = type;
         }
 
         public string Info()
         {
-            string overview;
-
-            overview = "Spot ID: " + CampSpotID + "\nSection ID: " + CampSpotSection +
-                "\nType: " + Type + "\nResidents Number: " + ResidentsCount + "\nPrice: " +
-                Price;
-
-            return overview;
+            return string.Format("Camp Spot ID: {0} \nCamp Spot Section: {1}", CampSpotID, CampSpotSection);
         }
     }
 }

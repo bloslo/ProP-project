@@ -127,7 +127,7 @@ namespace LoanMaterials_App
             }
         }
 
-        public void Register(int id, List<Item> loanedItems)
+        public void Register(int id, List<Item> loanedItems, decimal total)
         {
             MySqlCommand command;
 
@@ -135,8 +135,8 @@ namespace LoanMaterials_App
             {
                 conn.Open();
                 DateTime current = DateTime.Now;
-                string sql = "INSERT INTO rented_items (User_Id, Rent_Date) VALUES ('" + id + "', '" +
-                    current.Date.ToString("yyyy-MM-dd") + "');";
+                string sql = "INSERT INTO rented_items (User_Id, Total, Rent_Date) VALUES ('" + id + "', '" +
+                    total + "', '" + current.Date.ToString("yyyy-MM-dd") + "');";
                 command = new MySqlCommand(sql, conn);
 
                 command.ExecuteNonQuery();

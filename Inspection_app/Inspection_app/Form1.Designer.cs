@@ -50,7 +50,9 @@
             this.lblShopIncome = new System.Windows.Forms.Label();
             this.lblShopId = new System.Windows.Forms.Label();
             this.groupBoxArticle = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtProductName = new System.Windows.Forms.TextBox();
+            this.lblProductName = new System.Windows.Forms.Label();
+            this.txtStock = new System.Windows.Forms.TextBox();
             this.btnSoldQunatity = new System.Windows.Forms.Button();
             this.lblAmountLeft = new System.Windows.Forms.Label();
             this.txtQuantity = new System.Windows.Forms.TextBox();
@@ -89,6 +91,7 @@
             this.btnHistory.TabIndex = 10;
             this.btnHistory.Text = "Show History";
             this.btnHistory.UseVisualStyleBackColor = true;
+            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
             // 
             // comboBoxId
             // 
@@ -107,6 +110,7 @@
             this.btnShowStatus.TabIndex = 8;
             this.btnShowStatus.Text = "Show Status";
             this.btnShowStatus.UseVisualStyleBackColor = true;
+            this.btnShowStatus.Click += new System.EventHandler(this.btnShowStatus_Click);
             // 
             // txtName
             // 
@@ -181,7 +185,7 @@
             this.richTextBoxInfo.Location = new System.Drawing.Point(271, 37);
             this.richTextBoxInfo.Name = "richTextBoxInfo";
             this.richTextBoxInfo.ReadOnly = true;
-            this.richTextBoxInfo.Size = new System.Drawing.Size(265, 297);
+            this.richTextBoxInfo.Size = new System.Drawing.Size(265, 323);
             this.richTextBoxInfo.TabIndex = 1;
             this.richTextBoxInfo.Text = "";
             // 
@@ -193,6 +197,7 @@
             this.btnVisitorsOverview.TabIndex = 2;
             this.btnVisitorsOverview.Text = "Visitors Overview";
             this.btnVisitorsOverview.UseVisualStyleBackColor = true;
+            this.btnVisitorsOverview.Click += new System.EventHandler(this.btnVisitorsOverview_Click);
             // 
             // btnAccountsOverview
             // 
@@ -210,8 +215,9 @@
             this.btnCampingOverview.Name = "btnCampingOverview";
             this.btnCampingOverview.Size = new System.Drawing.Size(126, 25);
             this.btnCampingOverview.TabIndex = 4;
-            this.btnCampingOverview.Text = "Camping Overview";
+            this.btnCampingOverview.Text = "Free Camp Spots";
             this.btnCampingOverview.UseVisualStyleBackColor = true;
+            this.btnCampingOverview.Click += new System.EventHandler(this.btnCampingOverview_Click);
             // 
             // groupBoxShop
             // 
@@ -222,7 +228,7 @@
             this.groupBoxShop.Controls.Add(this.lblShopId);
             this.groupBoxShop.Location = new System.Drawing.Point(557, 29);
             this.groupBoxShop.Name = "groupBoxShop";
-            this.groupBoxShop.Size = new System.Drawing.Size(212, 146);
+            this.groupBoxShop.Size = new System.Drawing.Size(230, 146);
             this.groupBoxShop.TabIndex = 5;
             this.groupBoxShop.TabStop = false;
             this.groupBoxShop.Text = "Shop Overview";
@@ -235,6 +241,7 @@
             this.btnShowProfit.TabIndex = 6;
             this.btnShowProfit.Text = "Show Profit";
             this.btnShowProfit.UseVisualStyleBackColor = true;
+            this.btnShowProfit.Click += new System.EventHandler(this.btnShowProfit_Click);
             // 
             // txtProfit
             // 
@@ -249,6 +256,13 @@
             // 
             this.comboBoxShopID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxShopID.FormattingEnabled = true;
+            this.comboBoxShopID.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
             this.comboBoxShopID.Location = new System.Drawing.Point(95, 34);
             this.comboBoxShopID.Name = "comboBoxShopID";
             this.comboBoxShopID.Size = new System.Drawing.Size(100, 21);
@@ -276,7 +290,9 @@
             // 
             // groupBoxArticle
             // 
-            this.groupBoxArticle.Controls.Add(this.textBox1);
+            this.groupBoxArticle.Controls.Add(this.txtProductName);
+            this.groupBoxArticle.Controls.Add(this.lblProductName);
+            this.groupBoxArticle.Controls.Add(this.txtStock);
             this.groupBoxArticle.Controls.Add(this.btnSoldQunatity);
             this.groupBoxArticle.Controls.Add(this.lblAmountLeft);
             this.groupBoxArticle.Controls.Add(this.txtQuantity);
@@ -285,34 +301,54 @@
             this.groupBoxArticle.Controls.Add(this.lblProductID);
             this.groupBoxArticle.Location = new System.Drawing.Point(557, 185);
             this.groupBoxArticle.Name = "groupBoxArticle";
-            this.groupBoxArticle.Size = new System.Drawing.Size(212, 159);
+            this.groupBoxArticle.Size = new System.Drawing.Size(230, 201);
             this.groupBoxArticle.TabIndex = 6;
             this.groupBoxArticle.TabStop = false;
             this.groupBoxArticle.Text = "Product Overview";
             // 
-            // textBox1
+            // txtProductName
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(106, 94);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 18;
+            this.txtProductName.BackColor = System.Drawing.SystemColors.Window;
+            this.txtProductName.Location = new System.Drawing.Point(106, 68);
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.ReadOnly = true;
+            this.txtProductName.Size = new System.Drawing.Size(100, 20);
+            this.txtProductName.TabIndex = 20;
+            // 
+            // lblProductName
+            // 
+            this.lblProductName.AutoSize = true;
+            this.lblProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblProductName.Location = new System.Drawing.Point(6, 69);
+            this.lblProductName.Name = "lblProductName";
+            this.lblProductName.Size = new System.Drawing.Size(49, 15);
+            this.lblProductName.TabIndex = 19;
+            this.lblProductName.Text = "Name:";
+            // 
+            // txtStock
+            // 
+            this.txtStock.BackColor = System.Drawing.SystemColors.Window;
+            this.txtStock.Location = new System.Drawing.Point(106, 128);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.ReadOnly = true;
+            this.txtStock.Size = new System.Drawing.Size(100, 20);
+            this.txtStock.TabIndex = 18;
             // 
             // btnSoldQunatity
             // 
-            this.btnSoldQunatity.Location = new System.Drawing.Point(36, 124);
+            this.btnSoldQunatity.Location = new System.Drawing.Point(36, 165);
             this.btnSoldQunatity.Name = "btnSoldQunatity";
             this.btnSoldQunatity.Size = new System.Drawing.Size(143, 25);
             this.btnSoldQunatity.TabIndex = 16;
             this.btnSoldQunatity.Text = "Show Product overview";
             this.btnSoldQunatity.UseVisualStyleBackColor = true;
+            this.btnSoldQunatity.Click += new System.EventHandler(this.btnSoldQunatity_Click);
             // 
             // lblAmountLeft
             // 
             this.lblAmountLeft.AutoSize = true;
             this.lblAmountLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblAmountLeft.Location = new System.Drawing.Point(6, 95);
+            this.lblAmountLeft.Location = new System.Drawing.Point(6, 129);
             this.lblAmountLeft.Name = "lblAmountLeft";
             this.lblAmountLeft.Size = new System.Drawing.Size(60, 15);
             this.lblAmountLeft.TabIndex = 17;
@@ -321,7 +357,7 @@
             // txtQuantity
             // 
             this.txtQuantity.BackColor = System.Drawing.SystemColors.Window;
-            this.txtQuantity.Location = new System.Drawing.Point(106, 62);
+            this.txtQuantity.Location = new System.Drawing.Point(106, 96);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.ReadOnly = true;
             this.txtQuantity.Size = new System.Drawing.Size(100, 20);
@@ -331,7 +367,7 @@
             // 
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblQuantity.Location = new System.Drawing.Point(6, 63);
+            this.lblQuantity.Location = new System.Drawing.Point(6, 97);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(94, 15);
             this.lblQuantity.TabIndex = 14;
@@ -360,7 +396,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 356);
+            this.ClientSize = new System.Drawing.Size(799, 398);
             this.Controls.Add(this.groupBoxArticle);
             this.Controls.Add(this.groupBoxShop);
             this.Controls.Add(this.btnCampingOverview);
@@ -404,13 +440,15 @@
         private System.Windows.Forms.Label lblShopIncome;
         private System.Windows.Forms.Label lblShopId;
         private System.Windows.Forms.GroupBox groupBoxArticle;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.Button btnSoldQunatity;
         private System.Windows.Forms.Label lblAmountLeft;
         private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.Label lblQuantity;
         private System.Windows.Forms.ComboBox comboBoxProductID;
         private System.Windows.Forms.Label lblProductID;
+        private System.Windows.Forms.TextBox txtProductName;
+        private System.Windows.Forms.Label lblProductName;
 
     }
 }

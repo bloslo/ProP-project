@@ -106,7 +106,8 @@ namespace LoanMaterials_App
         {
             try
             {
-                connector.Register(Convert.ToInt32(txtID.Text), items);
+                decimal total = Convert.ToDecimal(txtTotal.Text);
+                connector.Register(Convert.ToInt32(txtID.Text), items, total);
 
                 txtBalanceLeft.Text = connector.Pay(txtRFID.Text, Convert.ToDecimal(txtTotal.Text)).ToString();
 

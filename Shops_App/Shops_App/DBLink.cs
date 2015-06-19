@@ -137,7 +137,7 @@ namespace Shops_App
             }
         }
 
-        public void RegisterPurchase(int userId, int shopId, List<Product> consumptions)
+        public void RegisterPurchase(int userId, int shopId, List<Product> consumptions, decimal total)
         {
             MySqlCommand comm = null;
 
@@ -148,8 +148,8 @@ namespace Shops_App
                 string sql = string.Empty;
                 DateTime current = DateTime.Now;
 
-                sql = "INSERT INTO order_header (User_Id, Shop_ID, Date) Values ('" + userId +
-                    "', '" + shopId + "', '" + current.Date.ToString("yyyy-MM-dd") + "');";
+                sql = "INSERT INTO order_header (User_Id, Shop_ID, Date, Total) Values ('" + userId +
+                    "', '" + shopId + "', '" + current.Date.ToString("yyyy-MM-dd") + "', '" + total + "');";
                 comm = new MySqlCommand(sql, connection);
 
                 comm.ExecuteNonQuery();
